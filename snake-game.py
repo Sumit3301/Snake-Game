@@ -25,7 +25,7 @@ while game_is_on:
     for seg in segments:
         seg.forward(20)
         screen.update()
-    time.sleep(1)    
+    time.sleep(0.1)    
 
 
 screen.exitonclick() #Screen will exit on clik on screen
