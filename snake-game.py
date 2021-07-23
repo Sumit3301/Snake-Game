@@ -1,6 +1,6 @@
 #Writing snake game on python using turtle library
 
-from turtle import Turtle,Screen,goto,xcor,ycor
+from turtle import Turtle,Screen,goto
 import time
 import turtle
 screen=Screen() #initilizing screen
@@ -15,6 +15,7 @@ segments=[]
 for position in starting_pos:
     new_segment=Turtle("square")
     new_segment.color("Black")
+    new_segment.penup()
     new_segment.goto(position)
     segments.append(new_segment)
 
@@ -27,10 +28,10 @@ while game_is_on:
     for seg in range(len(segments)-1,0,-1):
         new_x=segments[seg-1].xcor()
         new_y=segments[seg-1].ycor()
-        segments[seg]=goto(new_x,new_y)
-    segments[0].forward(10)
-
-
+        segments[seg].goto(new_x,new_y)
+    segments[0].forward(20)
+    segments[0].left(90)
+    
 
 screen.exitonclick() #Screen will exit on clik on screen
 
