@@ -9,7 +9,7 @@ screen.setup(width=600,height=600)#defining screen size
 screen.title("Snake Game")
 screen.tracer(0)
 
-snake=Snake
+snake=Snake()
 
 #Creating snake's body
 
