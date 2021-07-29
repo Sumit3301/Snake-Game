@@ -5,7 +5,9 @@ class Snake():
     def __init__(self):
         self.segments=[]
         self.create_snake()
-        #self.header=self.segments[0]
+        self.header=self.segments[0]
+    
+    
     def create_snake(self):
         for position in STARTING_POSITIONS:
             new_segment=Turtle("square")
@@ -19,20 +21,20 @@ class Snake():
             new_x=self.segments[seg-1].xcor()
             new_y=self.segments[seg-1].ycor()
             self.segments[seg].goto(new_x,new_y)
-        self.segments[0].forward(MOVE_DIST)
+        self.header.forward(MOVE_DIST)
 
     def up(self):
-        self.segments[0].setheading(90)
+        self.header.setheading(90)
 
     def down(self):
-        #self.header.setheading(270)
-        pass
+        self.header.setheading(270)
+
     def left(self):
-        #self.header.setheading(180)
-        pass
+        self.header.setheading(180)
+
     def right(self):
-        #self.header.setheading(0)
-        pass
+        self.header.setheading(0)
+
         
 
         

@@ -11,10 +11,10 @@ screen.tracer(0)
 
 snake=Snake()
 screen.listen()
-screen.onkey(Snake.up,"Up")
-screen.onkey(Snake.down,"Down")
-screen.onkey(Snake.left,"Left")
-screen.onkey(Snake.right,"Right")
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 
 #Creating snake's body
