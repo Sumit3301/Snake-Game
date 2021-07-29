@@ -10,6 +10,12 @@ screen.title("Snake Game")
 screen.tracer(0)
 
 snake=Snake()
+screen.listen()
+screen.onkey(Snake.up,"Up")
+screen.onkey(Snake.down,"Down")
+screen.onkey(Snake.left,"Left")
+screen.onkey(Snake.right,"Right")
+
 
 #Creating snake's body
 
