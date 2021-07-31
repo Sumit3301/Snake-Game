@@ -1,5 +1,6 @@
 from turtle import Turtle
 import random
+import turtle
 
 class Food(Turtle):
     def __init__(self):
@@ -17,9 +18,7 @@ class Food(Turtle):
         yrand=random.randint(-288,288)
         self.goto(xrand,yrand)
     
-    def score_increment(self):
-        self.score=self.score+1
-
+        
         
 
 

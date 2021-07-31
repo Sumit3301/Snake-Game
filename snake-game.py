@@ -22,21 +22,24 @@ screen.onkey(snake.right, "Right")
 #Creating snake's body
 
 game_is_on=True
-
+score=0
 #Animations of snake
 while game_is_on:
-    score=0
     screen.update()
     time.sleep(0.1)
     snake.move()
+    
     if(snake.header.distance(food))<15:
+        
         food.new_location()
-        food.score_increment()
         snake.add_segment()
+        
+    if(snake.header.xcor()>280 or snake.header.xcor()<-280 or snake.header.ycor()>280 or snake.header.ycor()<-280):
+        game_is_on=False
 
 
     
-print(score)
+
 screen.exitonclick() #Screen will exit on clik on screen
 
 

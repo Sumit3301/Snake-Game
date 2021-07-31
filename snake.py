@@ -1,7 +1,7 @@
 STARTING_POSITIONS=[(0,0),(-20,0),(-40,0)]
 MOVE_DIST=20
 
-from turtle import Turtle
+from turtle import Turtle, ycor
 class Snake():
     def __init__(self):
         self.segments=[]
@@ -22,8 +22,8 @@ class Snake():
             new_x=self.segments[seg-1].xcor()
             new_y=self.segments[seg-1].ycor()
             self.segments[seg].goto(new_x,new_y)
-        self.header.forward(MOVE_DIST) 
-
+        self.header.forward(MOVE_DIST)
+   
     def add_segment(self):
         add_segment=Turtle("square")
         add_segment.color("Black")
@@ -32,8 +32,8 @@ class Snake():
         new_ycor=self.segments[len(self.segments)-1].ycor()+10
         add_segment.goto(new_xcor,new_ycor)
         self.segments.append(add_segment)
-        
 
+    
 
     def up(self):
         self.header.setheading(90)
