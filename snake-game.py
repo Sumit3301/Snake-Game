@@ -33,10 +33,14 @@ while game_is_on:
         
         food.new_location()
         snake.add_segment()
-        
+
     if(snake.header.xcor()>280 or snake.header.xcor()<-280 or snake.header.ycor()>280 or snake.header.ycor()<-280):
         game_is_on=False
-
+    for segment in snake.segments:
+        if segment==snake.header:
+            pass
+        elif snake.header.distance(segment)<15:
+            game_is_on=False
 
     
 
