@@ -22,13 +22,16 @@ class Snake():
             new_x=self.segments[seg-1].xcor()
             new_y=self.segments[seg-1].ycor()
             self.segments[seg].goto(new_x,new_y)
-        self.header.forward(MOVE_DIST)
+        self.header.forward(MOVE_DIST) 
+
     def add_segment(self):
-         new_segment=Turtle("square")
-            new_segment.color("Black")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.segments.append(new_segment)
+        add_segment=Turtle("square")
+        add_segment.color("Black")
+        add_segment.penup()
+        new_xcor=self.segments[len(self.segments)-1].xcor()+10
+        new_ycor=self.segments[len(self.segments)-1].ycor()+10
+        add_segment.goto(new_xcor,new_ycor)
+        self.segments.append(add_segment)
         
 
 

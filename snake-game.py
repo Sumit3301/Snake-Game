@@ -32,6 +32,7 @@ while game_is_on:
     if(snake.header.distance(food))<15:
         food.new_location()
         food.score_increment()
+        snake.add_segment()
 
 
     
